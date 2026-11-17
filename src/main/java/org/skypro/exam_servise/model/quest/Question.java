@@ -1,4 +1,4 @@
-package org.skypro.exam_servise.model;
+package org.skypro.exam_servise.model.quest;
 
 import java.util.Objects;
 

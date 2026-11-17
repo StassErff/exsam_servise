@@ -1,12 +1,14 @@
-package org.skypro.exam_servise.servise;
+package org.skypro.exam_servise.model.servise;
 
-import org.skypro.exam_servise.model.Question;
+import org.skypro.exam_servise.model.quest.Question;
+import org.springframework.stereotype.Service;
 
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.Random;
 import java.util.Set;
 
+@Service
 public class JavaQuestionService implements QuestionService {
     private Set<Question> questionSet = new HashSet<>();
     private final Random random = new Random();

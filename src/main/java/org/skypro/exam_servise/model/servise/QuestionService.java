@@ -1,6 +1,6 @@
-package org.skypro.exam_servise.servise;
+package org.skypro.exam_servise.model.servise;
 
-import org.skypro.exam_servise.model.Question;
+import org.skypro.exam_servise.model.quest.Question;
 
 import java.util.Collection;
 
