@@ -13,8 +13,17 @@ public class JavaQuestionService implements QuestionService {
     private Set<Question> questionSet = new HashSet<>();
     private final Random random = new Random();
 
+    private boolean inValid(Question quest) {
+        if (quest == null || quest.getQuestion() == null ||
+                quest.getAnswer() == null ||
+                quest.getQuestion().isBlank() ||
+                quest.getAnswer().isBlank()) return true;
+        else return false;
+    }
+
     @Override
     public Question add(Question quest) {
+        if (inValid(quest)) return null;
         questionSet.add(quest);
         return quest;
     }
@@ -22,6 +31,7 @@ public class JavaQuestionService implements QuestionService {
     @Override
     public Question add(String quest, String answer) {
         Question question = new Question(quest, answer);
+        if (inValid(question)) return null;
         questionSet.add(question);
         return question;
     }
